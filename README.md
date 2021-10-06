@@ -35,7 +35,7 @@ dirsize test-folder
 
 ## Install
 ```bash
-go install github.com/ahmadrosid/dirsize
+go install github.com/ahmadrosid/dirsize@latest
 ```
 
 ## LICENSE
