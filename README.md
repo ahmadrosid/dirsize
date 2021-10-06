@@ -1,6 +1,6 @@
 ## Dirsize
 
-Easily get directory size.
+Get directory or file size easily.
 
 ## Usage
 Default folder :
