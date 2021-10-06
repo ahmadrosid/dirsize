@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 const notRegularFileMode os.FileMode = os.ModeDir | os.ModeSymlink | os.ModeNamedPipe | os.ModeSocket | os.ModeDevice | os.ModeCharDevice | os.ModeIrregular
@@ -78,7 +79,12 @@ func main() {
 	}
 	flag.Parse()
 
-	if len(Dirs) >= 2 {
+	if len(os.Args) >= 2 && !strings.Contains(os.Args[1], "-") {
+		Dirs = append(Dirs, os.Args[1:]...)
+	}
+
+	dirLen := len(Dirs)
+	if dirLen >= 2 {
 		Dirs = Dirs[1:]
 	}
 

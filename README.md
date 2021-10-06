@@ -18,8 +18,7 @@ dirsize --dir test
 Custom folder :
 ```bash
 dirsize --dir test1 --dir test2
-> ./test1: 2.35 MB
-> ./test2: 2.35 MB
+> ./test1: 2 KB
 ```
 
 Get file size :
