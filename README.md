@@ -28,6 +28,11 @@ dirsize --dir ./main
 > ./test2: 2.35 MB
 ```
 
+Or without dir flags
+```bash
+dirsize test-folder
+```
+
 ## Install
 ```bash
 go install github.com/ahmadrosid/dirsize
