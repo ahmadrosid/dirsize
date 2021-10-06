@@ -12,8 +12,6 @@ const notRegularFileMode os.FileMode = os.ModeDir | os.ModeSymlink | os.ModeName
 
 var sizes = []string{"B", "kB", "MB", "GB", "TB", "PB", "EB"}
 
-var Dirs = DirFlags{"."}
-
 type DirFlags []string
 
 func (i *DirFlags) String() string {
@@ -72,6 +70,7 @@ func Run(path string) {
 }
 
 func main() {
+	var Dirs = DirFlags{GetCurrentDir()}
 	flag.Var(&Dirs, "dir", "Directory name")
 	flag.Usage = func() {
 		fmt.Printf("Usage: dirsize [OPTIONS] argument ...\n")
