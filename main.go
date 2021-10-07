@@ -78,7 +78,7 @@ func main() {
 	}
 	flag.Parse()
 
-	if len(os.Args) >= 2 && !strings.Contains(os.Args[1], "-") {
+	if len(os.Args) >= 2 && !strings.HasPrefix(os.Args[1], "--") {
 		Dirs = append(Dirs, os.Args[1:]...)
 	}
 
