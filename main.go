@@ -23,7 +23,7 @@ func (i *DirFlags) Set(value string) error {
 	return nil
 }
 
-func getSize(s float64, base float64) string {
+func formatSize(s float64, base float64) string {
 	unitsLimit := len(sizes)
 	i := 0
 	for s >= base && i < unitsLimit {
@@ -66,7 +66,7 @@ func Run(path string) {
 		fmt.Println("Directory or file not found.")
 		os.Exit(-1)
 	}
-	fmt.Printf("%s: %s\n", path, getSize(float64(size), 1024.0))
+	fmt.Printf("%s: %s\n", path, formatSize(float64(size), 1024.0))
 }
 
 func main() {
